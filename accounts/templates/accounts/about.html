@@ -1,4 +1,8 @@
 {% extends 'accounts/index.html' %}
+{% block navbar_block %}
+<li class="nav-item"><a class="nav-link" href={% url 'login' %}>Login</a></li>
+<li class="nav-item"><a class="nav-link" href={% url 'lista_blogs' %}>Blogs</a></li>
+{% endblock navbar_block %}
 
 {% block body_block %}
     <!-- Header-->
