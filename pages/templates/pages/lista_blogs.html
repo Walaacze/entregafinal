@@ -16,8 +16,20 @@
      </p>
      {% for Blog in object_list %}
      <li>
+
+        
         {{Blog}}
-        <a href={% url 'detalle_blogs' blog.id %}> Ver mas... </a>
+        
+       
+        <style>
+        .button {color: white}
+        </style>
+        
+        <a href={% url 'detalle_blogs' Blog.id %} class = 'button'>  Ver mas</a> 
+        <a href= {% url 'actualizar_blog' Blog.id%} class = 'button'> Editar</a>
+        <a href= {% url 'borrar_blog' Blog.id%} class = 'button'> Borrar</a>
+        
+        
      </li>
      {% endfor %}
     </header>
@@ -29,6 +41,5 @@
         </div>
     </section>
     {% endblock body_block %}
-    
 
 
